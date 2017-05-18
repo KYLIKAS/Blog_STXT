@@ -4,7 +4,7 @@ class Quill_Recent_Comments extends WP_Widget {
 
 	function __construct() {
 		$widget_ops = array('classname' => 'quill_recent_comments', 'description' => __( 'Display your site&#8217;s recent comments with avatars.', 'quill' ) );
-		parent::__construct('recent-comments', __('Quill: Recent Comments', 'quill'), $widget_ops);
+		parent::__construct('recent-comments', __('Quill: Недавние комментарии', 'quill'), $widget_ops);
 		$this->alt_option_name = 'quill_recent_comments';
 
 		if ( is_active_widget(false, false, $this->id_base) )
@@ -59,7 +59,7 @@ class Quill_Recent_Comments extends WP_Widget {
 		extract($args, EXTR_SKIP);
 		$output = '';
 
-		$title = ( ! empty( $instance['title'] ) ) ? $instance['title'] : __( 'Recent Comments', 'quill' );
+		$title = ( ! empty( $instance['title'] ) ) ? $instance['title'] : __( 'Недавние комментарии', 'quill' );
 
 		/** This filter is documented in wp-includes/default-widgets.php */
 		$title = apply_filters( 'widget_title', $title, $instance, $this->id_base );
